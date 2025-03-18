@@ -1,13 +1,15 @@
 import { useState, useEffect } from "react";
 import "./App.css";
-import { Outlet } from "react-router-dom";
+import { Outlet,useOutletContext } from "react-router-dom";
 import Navbar from "./components/Navbar";
 
 function App() {
+  const [tenPokemonData, setTenPokemon] = useState([])
+
   return (
     <>
     <Navbar />
-      <Outlet />
+      <Outlet context={{tenPokemonData, setTenPokemon}}/>
     </>
   );
 }
