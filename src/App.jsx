@@ -5,7 +5,9 @@ import Navbar from "./components/Navbar";
 
 function App() {
   const [tenPokemonData, setTenPokemon] = useState([])
+  // console.log(tenPokemonData)
 
+  
   return (
     <>
     <Navbar />
