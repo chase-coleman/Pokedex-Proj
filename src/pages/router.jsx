@@ -3,6 +3,7 @@ import App from "../App.jsx";
 import Homepage from "./HomePage.jsx";
 import SinglePokemonPage from "./SinglePokemonPage.jsx";
 import ErrorPage from "./ErrorPage.jsx";
+import TeamPage from "./TeamPage.jsx";
 
 const router = createBrowserRouter([
   {
@@ -17,16 +18,16 @@ const router = createBrowserRouter([
         path: '/pokemon/:NameorID',
         element: <SinglePokemonPage />
       },
+      {
+        path: '/team',
+        element: <TeamPage />
+      },
     ],
     errorElement: <ErrorPage />
   },
 ]);
 
 export default router
-// {
-//   path: '/team',
-//   element: <TeamPage />
-// },
 // {
 //   path: 'nomatch',
 //   element: <NoMatchPage />
